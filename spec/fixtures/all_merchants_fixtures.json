@@ -1,0 +1,39 @@
+{
+  "data": [
+      {
+          "id": 1,
+          "attributes": {
+              "id": 1,
+              "name": "Schroeder-Jerde"
+          }
+      },
+      {
+          "id": 2,
+          "attributes": {
+              "id": 2,
+              "name": "Klein, Rempel and Jones"
+          }
+      },
+      {
+          "id": 3,
+          "attributes": {
+              "id": 3,
+              "name": "Willms and Sons"
+          }
+      },
+      {
+          "id": 4,
+          "attributes": {
+              "id": 4,
+              "name": "Cummings-Thiel"
+          }
+      },
+      {
+          "id": 5,
+          "attributes": {
+              "id": 5,
+              "name": "Williamson Group"
+          }
+      }
+  ]
+}
