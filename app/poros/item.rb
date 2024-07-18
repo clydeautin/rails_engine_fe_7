@@ -2,10 +2,11 @@ class Item
   attr_reader :name, :id, :description, :unit_price, :merchant_id
 
   def initialize(data)
-    @name = data[:name]
+    # require 'pry'; binding.pry
     @id = data[:id]
-    @description = data[:description]
-    @unit_price = data[:unit_price]
-    @merchant_id = data[:merchant_id]
+    @name = data[:attributes][:name]
+    @description = data[:attributes][:description]
+    @unit_price = data[:attributes][:unit_price]
+    @merchant_id = data[:attributes][:merchant_id]
   end
 end
