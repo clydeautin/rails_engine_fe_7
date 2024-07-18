@@ -9,7 +9,7 @@ class EngineBackendService
 
   def self.get_one_merchant(merchant_id)
     response = Faraday.get("#{BASE_URL}/merchants/#{merchant_id}")
-
+    # require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
