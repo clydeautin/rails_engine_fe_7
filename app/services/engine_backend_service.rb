@@ -6,4 +6,17 @@ class EngineBackendService
 
     JSON.parse(response.body, symbolize_names: true)
   end
+  
+  def self.get_one_merchant(merchant_id)
+    response = Faraday.get("#{BASE_URL}/merchants/#{merchant_id}")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.get_merchant_items(merchant_id)
+    response = Faraday.get("#{BASE_URL}/merchants/#{merchant_id}/items")
+
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
 end

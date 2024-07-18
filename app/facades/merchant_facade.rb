@@ -10,4 +10,18 @@ class MerchantFacade
       Merchant.new(merchant_data[:attributes])
     end
   end
+
+  def one_merchant_by_id(merchant_id)
+    json = EngineBackendService.get_one_merchant(merchant_id)
+
+    Merchant.new(json[:data])
+  end
+
+  def merchant_items(merchant_id)
+    json = EngineBackendService.get_merchant_items(merchant_id)
+
+    json[:data].map do |item_data|
+      Item.new(item_data[:attributes])
+    end
+  end
 end

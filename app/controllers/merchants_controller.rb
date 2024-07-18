@@ -4,6 +4,8 @@ class MerchantsController < ApplicationController
   end
 
   def show
-    @merchant = Merchant.find(params[:id])
+    # require 'pry'; binding.pry
+    @merchant = MerchantFacade.new.one_merchant_by_id(params[:merchant_id])
+    @merchant_items = MerchantFacade.new.merchant_items(params[:merchant_id])
   end
 end
